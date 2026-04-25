@@ -1,0 +1,229 @@
+---
+import Layout from '../../components/Layout.astro';
+import FoilTemplate from '../../components/FoilTemplate.astro';
+
+const boardComment = `Good evening. My name is [YOUR NAME]. I am the parent of a [GRADE] student at Taconic Hills. I am here about the district's 1:1 device program in grades K through 2.
+
+The American Academy of Pediatrics recommends limiting digital media for children under 5 and prioritizing high-quality, co-viewed content over solo device time. The World Health Organization recommends no more than one hour of sedentary screen time per day for children under 5, with less being better. In 2023 Sweden's Ministry of Education partially reversed its push toward classroom tablets in early grades and restored printed books and handwriting. None of these are anti-technology positions. They are mainstream developmental guidance.
+
+Taconic Hills currently issues laptops to students under a take-home model. The district publishes a laptop insurance page and a laptop return schedule, which are evidence of an active 1:1 program. The district's Parents Bill of Rights for Data Privacy is posted on the Annual Notifications page. The district's Data Protection Officer is John Dodds.
+
+I am not here to criticize the program for older grades. I am asking the board to do four specific things for grades K through 2.
+
+First, direct the administration to present, at a public meeting in the next quarter, the developmental rationale and evidence the district relied on to assign 1:1 devices to children in K through 2.
+
+Second, direct the administration to publish, in plain language, what data is collected from K-2 student devices, by which vendors, and for how long it is retained.
+
+Third, formally consider a policy that pauses 1:1 device assignment in grades K through 2 pending that review, with in-school instructional technology use at teacher discretion in the meantime.
+
+Fourth, include a parent representative from the K-2 grade band on any committee that reviews the program.
+
+These are reasonable, procedural asks. I am happy to bring other K-2 parents to the next meeting if it would help. Thank you.`;
+
+const foilK2 = `[YOUR DATE]
+
+[YOUR NAME]
+[YOUR ADDRESS]
+[YOUR EMAIL]
+
+Records Access Officer
+Taconic Hills Central School District
+73 County Route 11A
+Craryville, NY 12521
+
+Re: Freedom of Information Law request — K-2 1:1 device program
+
+Dear Records Access Officer:
+
+Pursuant to the New York Freedom of Information Law (Public Officers Law Article 6), I request copies of the following records concerning the district's 1:1 student device program as it applies to grades K through 2:
+
+1. The current Board of Education policy or policies governing 1:1 device issuance to students in grades K, 1, and 2, including any take-home agreements, acceptable use policies, and the parent/guardian sign-off form used for K-2.
+
+2. Any document, memo, presentation, or board minute in which the district's administration described the developmental, instructional, or pedagogical rationale for assigning a 1:1 device to students in grades K, 1, or 2, dated 2018 to present.
+
+3. The current list of every application, extension, browser-based service, or operating-system service installed by default on a Taconic Hills K-2 student-issued device, and the vendor for each.
+
+4. Every signed Data Protection Agreement (DPA) between the district and a vendor whose product is used by K-2 students, together with the supplemental information document required under 8 NYCRR Part 121.3 for each DPA.
+
+5. The most recent Parents Bill of Rights for Data Privacy and Security as in effect for the current school year, and any prior version in effect during the past three school years.
+
+6. Any data retention schedule applicable to telemetry, search history, location data, document content, or screen-monitoring data collected from K-2 student-issued devices.
+
+7. The total cost of the K-2 portion of the 1:1 program for the current and prior school years (devices, licenses, monitoring software, and insurance), broken out by line item to the extent the district can.
+
+8. The total number of K-2 students currently issued a 1:1 device.
+
+I request electronic delivery (PDF or original electronic format) where possible, to my email address above. Please advise in advance if any portion of this request will incur fees over $5.
+
+If any portion of this request is denied, please cite the specific statutory exemption relied on, and please provide the records that are not subject to that exemption.
+
+Please acknowledge this request within five business days as required by §89(3) of the Public Officers Law.
+
+Thank you for your assistance.
+
+Sincerely,
+
+[YOUR NAME]`;
+
+const personalOptOut = `[YOUR DATE]
+
+[YOUR NAME]
+[YOUR ADDRESS]
+[YOUR EMAIL]
+
+Lynnette Brunger, Superintendent
+Taconic Hills Central School District
+73 County Route 11A
+Craryville, NY 12521
+
+cc: John Dodds, Data Protection Officer (JDodds@taconichills.k12.ny.us)
+
+Re: [STUDENT NAME], grade K — 1:1 device program
+
+Dear Superintendent Brunger,
+
+I am writing about my child's participation in the district's 1:1 device program. I appreciate the district's instructional work and would like to put a few specific requests on the record while a broader review of the K-2 program is underway.
+
+For my child specifically, for the [SCHOOL YEAR] school year, I am requesting the following:
+
+- No 1:1 device should be assigned to my child for take-home use. In-school instructional use during specific lessons is acceptable; the device should remain at school at the end of each day. If a 1:1 device assignment is unavoidable, please confirm in writing what data the device will collect, what monitoring software (if any) is installed, and how long that data is retained.
+
+- No Google Workspace for Education account should be created in my child's name without my prior written consent. If an account already exists, please describe what it contains.
+
+- No third-party application or extension should be installed on any device my child uses without prior notice to me, including the vendor name and the data the application accesses.
+
+- Under NY Education Law §2-d and Part 121, please send me the Parents Bill of Rights for Data Privacy and the supplemental information document for each Data Protection Agreement that covers a vendor used in K-2.
+
+- Under FERPA, please send me a copy of my child's education records currently on file, including any data collected through any school-issued device.
+
+I am asking for a written response, even if a particular request cannot be granted. A written record helps both of us be precise about what is and is not in effect for my child.
+
+I would also welcome a brief meeting at your convenience to discuss the K-2 program more broadly. Several other K-2 parents at Taconic Hills share these concerns and we would prefer to work with the district rather than only through public comment.
+
+Thank you for your attention.
+
+Sincerely,
+
+[YOUR NAME]
+Parent of [STUDENT NAME], [SCHOOL/CLASSROOM]`;
+---
+
+<Layout title="Campaign — no devices for Taconic Hills K-2" description="A specific, sourced campaign asking the Taconic Hills Board of Education to pause 1:1 device assignment in grades K-2 pending a developmental review.">
+  <article class="prose-measure mx-auto px-4 py-10">
+    <p class="text-sm text-stone-500"><a href="/districts/taconic-hills/">← Taconic Hills district page</a></p>
+    <h1 class="text-3xl font-semibold mt-2 mb-2">Campaign: no 1:1 devices for K-2 at Taconic Hills</h1>
+    <p class="text-stone-700">A focused, sourced ask to the Taconic Hills Board of Education: pause 1:1 device assignment in grades K-2 pending a public developmental review. Built for parents of K-2 students at Taconic Hills who want to act together.</p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">The ask, in one sentence</h2>
+    <p>Pause 1:1 device assignment in grades K-2 at Taconic Hills pending a public developmental review, and bring K-2 parents into that review.</p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">Why this ask, specifically</h2>
+    <ul class="list-disc pl-5 space-y-2">
+      <li>The American Academy of Pediatrics' guidance on screen media for young children recommends limiting digital media use for children under 5 (<a href="https://publications.aap.org/pediatrics/article/138/5/e20162591/60503/">AAP, 2016</a>).</li>
+      <li>The WHO's 2019 guidelines for children under 5 recommend no more than one hour per day of sedentary screen time, with less being better (<a href="https://www.who.int/publications/i/item/9789241550536">WHO, 2019</a>).</li>
+      <li>Sweden's Ministry of Education partially reversed its push toward early-grades tablets in 2023, restoring printed books and handwriting (<a href="https://www.reuters.com/world/europe/sweden-brings-more-books-quiet-reading-time-back-its-schools-2023-09-11/">Reuters, 2023</a>).</li>
+      <li>Taconic Hills currently runs a take-home 1:1 laptop program — see the district's <a href="https://www.taconichills.k12.ny.us/page/laptop-insurance">laptop insurance</a> and laptop return schedule pages — but does not appear to publicly state which grades it covers or the developmental rationale used for K-2.</li>
+      <li>Taconic Hills's <a href="https://www.taconichills.k12.ny.us/page/annual-notifications-and-information#br">Parents Bill of Rights for Data Privacy</a> is posted; the per-vendor supplemental information required under 8 NYCRR Part 121.3 is not, as of this writing, found at a public URL. That is a §2-d obligation that bites harder for younger students because they cannot consent for themselves and have less ability to opt out of specific apps.</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">Step 1 — Show up at the next board meeting</h2>
+    <p>Taconic Hills Board of Education meetings are posted on <a href="https://go.boarddocs.com/ny/taconichills/Board.nsf/Public">BoardDocs</a>. Find the next meeting, sign up for public comment (the procedure is on the board agenda), and read the comment below at a measured pace — it runs ~2 minutes.</p>
+
+    <FoilTemplate
+      title="2-minute board comment"
+      description="Replace [YOUR NAME] and [GRADE]. Calibrated to specifically reference Taconic Hills's own published materials so the board cannot dismiss it as generic."
+      body={boardComment}
+    />
+
+    <h2 class="text-xl font-semibold mt-10 mb-2">Step 2 — Send a narrow FOIL request for K-2 specifics</h2>
+    <p>This FOIL is intentionally narrower than the general FOIL templates: it focuses only on K-2. It surfaces the developmental rationale the district used (or didn't), the K-2 vendor list, the K-2 cost, and the supplemental Part 121.3 documents that should exist for every vendor. Send it to the district's Records Access Officer.</p>
+
+    <FoilTemplate
+      title="K-2 FOIL request"
+      description="Replace bracketed fields. Address line is pre-filled for Taconic Hills."
+      body={foilK2}
+    />
+
+    <h2 class="text-xl font-semibold mt-10 mb-2">Step 3 — Send your personal opt-out letter as a backstop</h2>
+    <p>While the policy fight runs, get your own child's opt-out request on the record. This letter cc's John Dodds (the district's DPO) so the data-privacy clock starts running.</p>
+
+    <FoilTemplate
+      title="Personal opt-out letter — Taconic Hills K-2"
+      description="Replace bracketed fields. Pre-addressed to Superintendent Lynnette Brunger and cc'd to DPO John Dodds."
+      body={personalOptOut}
+    />
+
+    <p class="text-sm mt-3">For a more customized letter (different reasons, different requests), use the <a href="/opt-out/letter-generator/?district=taconic-hills">letter generator</a> with Taconic Hills pre-selected.</p>
+
+    <h2 class="text-xl font-semibold mt-10 mb-2">Step 4 — Find other K-2 parents</h2>
+    <p>One parent saying this gets noted; five parents saying it gets agendized. Practical ways to find other Taconic Hills K-2 parents who share the concern:</p>
+    <ul class="list-disc pl-5 space-y-1">
+      <li>Class parents email lists (ask your child's teacher to forward an introduction).</li>
+      <li>The school's PTA or PTO meeting (open to all parents).</li>
+      <li>Local parent Facebook groups for Hudson, Craryville, and surrounding towns.</li>
+      <li>The next public board meeting — parents often introduce themselves before/after.</li>
+    </ul>
+    <p class="mt-2">When you find them, send them this page. The point is collective, on-the-record, narrowly-scoped pressure.</p>
+
+    <h2 class="text-xl font-semibold mt-10 mb-2">Realistic timeline</h2>
+    <ul class="list-disc pl-5 space-y-1">
+      <li><strong>Week 0:</strong> Send personal opt-out letter and FOIL.</li>
+      <li><strong>Week 1:</strong> District acknowledges FOIL within 5 business days.</li>
+      <li><strong>Weeks 1-4:</strong> Attend the next board meeting; read the comment. Bring at least one other K-2 parent if possible.</li>
+      <li><strong>Weeks 4-6:</strong> District responds to FOIL or specifies a later date. Document what is and isn't produced.</li>
+      <li><strong>Weeks 6-12:</strong> Use FOIL response (or its gaps) to ask the board to formally agendize the K-2 program review.</li>
+      <li><strong>Months 3-6:</strong> Coalition builds, board takes a position. Most policy changes at this scale take a school-year cycle, not a meeting.</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold mt-10 mb-2">Other angles to fight on</h2>
+    <p>The developmental argument is the spine. Anything below is an arm. You don't need all of them; pick the two or three that fit your facts and the district you're in.</p>
+
+    <h3 class="font-serif text-lg font-semibold mt-5 mb-1">1. Equity</h3>
+    <p>Push back on the "1:1 closes the digital divide" line. For K-2 specifically, kids without home support don't benefit from a take-home device the way the talking point implies; they often lose. Ask: what's the K-2 reading and writing data <em>before vs. after</em> the 1:1 program? If the district can't produce it, that's the answer.</p>
+
+    <h3 class="font-serif text-lg font-semibold mt-5 mb-1">2. Vision and fine motor</h3>
+    <p>Pediatric optometrists and OTs increasingly flag near-vision strain and handwriting deficits in early-grades 1:1 cohorts. A signed letter from your child's pediatrician or OT raising vision/fine-motor concerns is a real handle for an individual accommodation and for board testimony from medical professionals.</p>
+
+    <h3 class="font-serif text-lg font-semibold mt-5 mb-1">3. Surveillance of minors</h3>
+    <p>Most districts run monitoring software (GoGuardian, Gaggle, Securly, Lightspeed) on student devices. <a href="https://www.eff.org/issues/student-privacy">EFF</a> and the <a href="https://cdt.org/insights/report-online-and-observed-student-privacy-implications-of-school-issued-devices-and-student-activity-monitoring-software/">Center for Democracy and Technology</a> have documented over-flagging, retention, and review practices that most parents would not consent to if asked plainly. For K-2 the question is sharper: what does it mean to surveil the home computer use of a 5-year-old?</p>
+
+    <h3 class="font-serif text-lg font-semibold mt-5 mb-1">4. Cost / fiduciary</h3>
+    <p>FOIL #7 above asks for the K-2 line items. If the K-2 portion of the program is meaningful spending and the developmental rationale is thin, that's a taxpayer argument that brings non-parent voters into your meeting. Local school budgets pass and fail on small margins.</p>
+
+    <h3 class="font-serif text-lg font-semibold mt-5 mb-1">5. Process — was K-2 ever publicly justified?</h3>
+    <p>Most 1:1 programs were adopted at the secondary level and quietly extended downward. If Taconic Hills cannot produce a board minute, presentation, or memo where the K-2 extension was deliberately considered (FOIL #2 above), the answer to "was this ever justified for K-2?" is "no" — and that's leverage on its own.</p>
+
+    <h3 class="font-serif text-lg font-semibold mt-5 mb-1">6. Peer-district comparison</h3>
+    <p>Other Columbia County K-12 districts (Chatham, Germantown, Hudson, Ichabod Crane, New Lebanon) handle K-2 differently. If even one neighboring district does not issue 1:1 take-home devices to K-2, that's a "the sky won't fall" example to put in front of the board. Use the <a href="/districts/">district lookup</a> to compare; if the data isn't there yet, FOIL the same K-2 questions to those districts and add them.</p>
+
+    <h3 class="font-serif text-lg font-semibold mt-5 mb-1">7. §2-d / Part 121 compliance gaps</h3>
+    <p>Posting the Parents Bill of Rights is necessary but not sufficient. Part 121.3 also requires a per-vendor supplemental information document for every Data Protection Agreement. If the district can't produce those for K-2 vendors (FOIL #4), that's a state-regulation compliance gap, not just a local policy disagreement. Persistent non-compliance is reportable to NYSED.</p>
+
+    <h3 class="font-serif text-lg font-semibold mt-5 mb-1">8. Teachers</h3>
+    <p>Many K-2 teachers privately prefer non-screen instruction and would welcome the change but can't say so publicly without protection. You don't need them to speak at the board — you need their union rep to know parents are pushing the same direction. The local NYSUT chapter is the entry point. A handful of supportive teachers is a force multiplier; even silent ones are not opposing you.</p>
+
+    <h3 class="font-serif text-lg font-semibold mt-5 mb-1">9. Special education</h3>
+    <p>Kids with existing IEPs or 504 plans (vision, attention, sensory) often shouldn't be on screens for extended periods, and yet are pulled into 1:1 by default. Asking the board how the K-2 program interacts with existing accommodations forces the district to either document the carve-outs or acknowledge there aren't any.</p>
+
+    <h3 class="font-serif text-lg font-semibold mt-5 mb-1">10. Local press</h3>
+    <p>Hudson Valley newspapers cover school-board stories — <a href="https://www.columbiapaper.com/">The Columbia Paper</a>, <a href="https://www.hudsonvalley360.com/">Hudson Valley 360</a>, the <a href="https://www.dailygazette.com/">Daily Gazette</a>. A specific, sourced ask — "parents are asking the board to pause K-2 1:1 pending a developmental review" — is a clean story. If the FOIL response is thin, the story writes itself.</p>
+
+    <h3 class="font-serif text-lg font-semibold mt-5 mb-1">11. State elected officials</h3>
+    <p>NY State Senate and Assembly members covering Columbia County have constituent staff who can make a phone call to NYSED's data privacy office. They will not legislate this for you, but a polite "I'd like to flag a §2-d compliance question to NYSED" call routed through your state senator's office moves the issue from the district's local file to a state file with a tracking number.</p>
+
+    <h3 class="font-serif text-lg font-semibold mt-5 mb-1">12. NYSED complaint</h3>
+    <p>If §2-d / Part 121 obligations are not being met (no per-vendor supplemental information, no documented DPO training, no compliance report), parents can submit a complaint to NYSED's Chief Privacy Officer at <a href="https://www.nysed.gov/data-privacy-security">data.privacy@nysed.gov</a>. This is rarely used and has real effect — the state has audit authority over districts.</p>
+
+    <h2 class="text-xl font-semibold mt-10 mb-2">If the district pushes back</h2>
+    <ul class="list-disc pl-5 space-y-1">
+      <li><strong>"It's required by the state."</strong> It is not. The 2025 NY Distraction-Free Schools law restricts <em>personal</em> phones; it does not require 1:1 school-issued devices. (<a href="https://www.nysenate.gov/legislation/laws/EDN/814">Ed Law §814</a>.)</li>
+      <li><strong>"It's required for testing."</strong> NYSED state assessments in grades 3-8 are administered on devices in many districts. K-2 has no comparable requirement.</li>
+      <li><strong>"Other parents want it."</strong> Fine — those parents can opt in. Your ask is a default, not a ban.</li>
+      <li><strong>"We've already studied this."</strong> Then publishing the study and the developmental rationale is a small step. The FOIL response will tell us if the study exists.</li>
+    </ul>
+
+    <div class="disclaimer mt-10">
+      This page provides information, not legal advice. The campaign frame here is procedural: it asks the board to follow its existing §2-d and Part 121 obligations and to document its developmental rationale. It does not assert a statutory right to refuse a school-issued device. For situations involving an individual 504/IEP claim or a contested take-home requirement, consult an education attorney.
+    </div>
+  </article>
+</Layout>
