@@ -1,0 +1,68 @@
+---
+import Layout from '../../components/Layout.astro';
+import statutes from '../../data/statutes.json';
+
+type Statute = { id: string; short_name: string; full_citation: string; summary: string; url: string; key_provisions: string[] };
+const s = (id: string) => (statutes as Statute[]).find((x) => x.id === id)!;
+---
+
+<Layout title="Opt out — the legal landscape">
+  <article class="prose-measure mx-auto px-4 py-12">
+    <h1 class="text-3xl font-semibold mb-4">The legal landscape, plain English</h1>
+    <p class="text-stone-600 italic">What NY law actually says about school-issued devices, what districts can and can't compel, and what handles parents have. This is a summary, not legal advice.</p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">1. What the law actually says</h2>
+    <p>Four statutes do most of the work in this area:</p>
+    <ul class="list-disc pl-5 space-y-3 mt-3">
+      <li>
+        <a href={s('ny-ed-2d').url}><strong>{s('ny-ed-2d').short_name}</strong></a> — {s('ny-ed-2d').summary}
+      </li>
+      <li>
+        <a href={s('nysed-part-121').url}><strong>{s('nysed-part-121').short_name}</strong></a> — {s('nysed-part-121').summary}
+      </li>
+      <li>
+        <a href={s('ferpa').url}><strong>{s('ferpa').short_name}</strong></a> — {s('ferpa').summary}
+      </li>
+      <li>
+        <a href={s('coppa').url}><strong>{s('coppa').short_name}</strong></a> — {s('coppa').summary}
+      </li>
+      <li>
+        <a href={s('ny-distraction-free').url}><strong>{s('ny-distraction-free').short_name}</strong></a> — {s('ny-distraction-free').summary}
+      </li>
+    </ul>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">2. What districts can and can't compel</h2>
+    <p>Honest framing: there is no statewide right in New York to refuse a school-issued instructional device. Districts have broad discretion over the curriculum and the tools used in it. But that does not mean parents have no leverage. The real handles are:</p>
+    <ul class="list-disc pl-5 space-y-2 mt-3">
+      <li><strong>§2-d compliance.</strong> Every NY district must post a Parents Bill of Rights for Data Privacy, sign DPAs with every vendor that handles student PII, designate a Data Protection Officer, and respond to parent requests for inspection or deletion of their child's data. Many districts are not fully compliant; documenting the gap is leverage.</li>
+      <li><strong>FERPA.</strong> Parents have the right to inspect their child's education records, request corrections, and (with limited exceptions) consent to disclosures of PII to third parties.</li>
+      <li><strong>Take-home vs. in-school.</strong> Take-home device requirements are usually a district policy, not a statutory mandate. Policies can be amended; specific opt-outs from take-home use are sometimes granted on request even where no formal procedure exists.</li>
+      <li><strong>Specific data-sharing opt-outs.</strong> §2-d gives parents the right to ask what data is being shared with whom; a parent can decline specific third-party sharing in some cases by directing the district in writing.</li>
+      <li><strong>Monitoring software.</strong> A parent can request, in writing, the specific monitoring software installed on their child's device, what categories it flags, who reviews flags, and how long data is retained. Districts must answer.</li>
+      <li><strong>IEP / 504 accommodations.</strong> Where a child has a documented sensory, attentional, vision, or other condition for which screen-based instruction is contraindicated, a 504 plan or IEP accommodation may be the right path.</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">3. Approaches parents have used</h2>
+    <p>Approaches that align with district policy and that parents in similar positions have used:</p>
+    <ul class="list-disc pl-5 space-y-2 mt-3">
+      <li>Submit an opt-out letter that does not refuse the instructional program but specifies: no take-home device, no Google Workspace account creation, no third-party app installation without notice, and a request for the relevant DPAs.</li>
+      <li>FOIL the district for its 1:1 device policy, all signed DPAs, and the Parents Bill of Rights. Use the response as the basis for further requests.</li>
+      <li>Speak at a public board meeting using one of the templates on the <a href="/board-meetings/">board meetings</a> page. Public comment is on the record and is itself leverage.</li>
+      <li>Where there is a documented sensory or vision concern, work with the child's pediatrician and the district's CSE/504 team to formalize accommodations.</li>
+    </ul>
+    <p class="mt-3">We do not include invented success stories. If you have a real, anonymizable account that would help other parents, please send it in via the contact on the about page.</p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">4. What this site is not</h2>
+    <p>This site is a parent's research starting point, not a legal opinion. Specific situations — particularly where a 504/IEP, a religious objection, or a contested take-home requirement is involved — benefit from consulting an education attorney. Several NY-area civil-liberties and education-law organizations offer parent intake. We do not refer to specific firms.</p>
+
+    <div class="mt-10 border border-stone-200 rounded-lg p-5 bg-white">
+      <h3 class="font-serif text-lg font-semibold mb-1">Ready to put it in writing?</h3>
+      <p class="text-sm text-stone-600 mb-3">Use the letter generator. The form runs in your browser; nothing is sent or stored.</p>
+      <a href="/opt-out/letter-generator/" class="inline-block bg-stone-900 text-white px-4 py-2 rounded no-underline hover:bg-stone-700">Open the letter generator →</a>
+    </div>
+
+    <div class="disclaimer mt-8">
+      This page provides information, not legal advice. Consult an education attorney for specific situations.
+    </div>
+  </article>
+</Layout>

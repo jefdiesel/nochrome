@@ -1,0 +1,77 @@
+---
+import Layout from '../../components/Layout.astro';
+import FoilTemplate from '../../components/FoilTemplate.astro';
+
+const body = `[YOUR DATE]
+
+[YOUR NAME]
+[YOUR ADDRESS]
+[YOUR EMAIL]
+
+Records Access Officer
+[DISTRICT NAME]
+[DISTRICT ADDRESS]
+
+Re: Freedom of Information Law request — vendor Data Protection Agreements and Parents Bill of Rights for Data Privacy
+
+Dear Records Access Officer:
+
+Pursuant to the New York Freedom of Information Law (Public Officers Law Article 6) and in connection with the rights established by Education Law §2-d and 8 NYCRR Part 121, I request copies of the following records:
+
+1. The district's Parents Bill of Rights for Data Privacy, in the form currently posted or maintained, and any prior versions in effect during the past three school years.
+
+2. Every signed Data Protection Agreement (DPA) between the district and a third-party contractor or service provider that has access to student personally identifiable information (PII), as defined in Education Law §2-d(1)(c) and Part 121.1(j). This includes, without limitation, agreements with:
+   - Google (Workspace for Education and any related services),
+   - The device manufacturer and any device-management vendor,
+   - Any classroom-monitoring or content-filtering vendor (e.g., GoGuardian, Gaggle, Securly, Lightspeed),
+   - Any learning management system vendor,
+   - Any assessment, adaptive-learning, or analytics vendor,
+   - Any single-sign-on or roster-management vendor (e.g., Clever, ClassLink),
+   - Any communication or behavior-management vendor (e.g., ClassDojo, Remind, Seesaw).
+
+3. The supplemental information document required by Part 121.3 for each DPA listed in (2).
+
+4. The current public list (or website page) on which the district maintains its inventory of contractors and service providers with access to student PII.
+
+I request electronic delivery (PDF or original electronic format) where possible, to my email address above. Please advise in advance if any portion of this request will incur fees over $5.
+
+If any portion of this request is denied, please cite the specific statutory exemption relied on, and please provide the records that are not subject to that exemption.
+
+Please acknowledge this request within five business days as required by §89(3) of the Public Officers Law.
+
+Thank you for your assistance.
+
+Sincerely,
+
+[YOUR NAME]`;
+---
+
+<Layout title="FOIL — vendor DPAs and Parents Bill of Rights">
+  <article class="prose-measure mx-auto px-4 py-10">
+    <p class="text-sm text-stone-500 mb-1"><a href="/foil/">← All FOIL templates</a></p>
+    <h1 class="text-3xl font-semibold mb-2">FOIL: vendor DPAs and Parents Bill of Rights</h1>
+
+    <h2 class="text-lg font-semibold mt-6 mb-1">What this gets you</h2>
+    <p class="text-stone-700">Every signed Data Protection Agreement the district has with a vendor that handles your child's data, plus the district's Parents Bill of Rights for Data Privacy. Required by §2-d and Part 121.</p>
+
+    <h2 class="text-lg font-semibold mt-6 mb-1">Where to send it</h2>
+    <p class="text-stone-700">The district's Records Access Officer.</p>
+
+    <h2 class="text-lg font-semibold mt-6 mb-1">What to expect</h2>
+    <ul class="list-disc pl-5 text-stone-700">
+      <li>5 business days to acknowledge.</li>
+      <li>20 business days to respond, deny, or specify a reasonable later date.</li>
+      <li>If the district claims trade-secret exemption on a DPA, the §2-d clauses (privacy and security terms) are still public; only narrow commercial terms can be redacted.</li>
+    </ul>
+
+    <FoilTemplate
+      title="Template letter"
+      description="Replace bracketed fields. The vendor list is intentionally broad — the district may not have agreements with all of these, and that's useful information too."
+      body={body}
+    />
+
+    <div class="disclaimer mt-8">
+      Template, not legal advice.
+    </div>
+  </article>
+</Layout>

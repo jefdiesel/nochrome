@@ -1,0 +1,72 @@
+---
+import Layout from '../../components/Layout.astro';
+import FoilTemplate from '../../components/FoilTemplate.astro';
+
+const body = `[YOUR DATE]
+
+[YOUR NAME]
+[YOUR ADDRESS]
+[YOUR EMAIL]
+
+Records Access Officer
+[DISTRICT NAME]
+[DISTRICT ADDRESS]
+
+Re: Freedom of Information Law request — 1:1 device program policy and contracts
+
+Dear Records Access Officer:
+
+Pursuant to the New York Freedom of Information Law (Public Officers Law Article 6), I request copies of the following records relating to the district's 1:1 student device program:
+
+1. The current Board of Education policy or policies governing the district's 1:1 device program, including any policies on take-home use, acceptable use (AUP), parent/student device agreements, lost or damaged device fees, and consequences for non-participation.
+
+2. The full text of any signed contracts and master agreements between the district and the device manufacturer(s) and software vendor(s) used in the 1:1 program (e.g., Google, Apple, Microsoft, the device leasing or financing entity, and any classroom-management or monitoring software vendors).
+
+3. Any current vendor or product list identifying every application, extension, or service installed by default on student-issued devices in grades K-5.
+
+4. Any board or administrative policy describing a parent's options to (a) decline a take-home device, (b) opt the student out of specific applications, or (c) request alternatives to device-based instruction.
+
+5. Board minutes from any meetings in the past 24 months in which the 1:1 device program, its renewal, or its modification was discussed or voted on.
+
+I request electronic delivery (PDF or original electronic format) where possible, to my email address above. Please advise in advance if any portion of this request will incur fees over $5.
+
+If any portion of this request is denied, please cite the specific statutory exemption relied on, and please provide the records that are not subject to that exemption.
+
+Please acknowledge this request within five business days as required by §89(3) of the Public Officers Law.
+
+Thank you for your assistance.
+
+Sincerely,
+
+[YOUR NAME]`;
+---
+
+<Layout title="FOIL — 1:1 device policy and contracts">
+  <article class="prose-measure mx-auto px-4 py-10">
+    <p class="text-sm text-stone-500 mb-1"><a href="/foil/">← All FOIL templates</a></p>
+    <h1 class="text-3xl font-semibold mb-2">FOIL: 1:1 device policy and contracts</h1>
+
+    <h2 class="text-lg font-semibold mt-6 mb-1">What this gets you</h2>
+    <p class="text-stone-700">The board policy that governs the 1:1 program, the actual signed contracts behind it, and the list of software installed by default. This is the foundational request — the document trail every other §2-d question rests on.</p>
+
+    <h2 class="text-lg font-semibold mt-6 mb-1">Where to send it</h2>
+    <p class="text-stone-700">The district's Records Access Officer (RAO) — usually the district clerk. Look on the district website under "Board of Education," "FOIL," "Records Access," or "District Clerk."</p>
+
+    <h2 class="text-lg font-semibold mt-6 mb-1">What to expect</h2>
+    <ul class="list-disc pl-5 text-stone-700">
+      <li>5 business days to acknowledge.</li>
+      <li>20 business days to respond, deny, or specify a reasonable later date.</li>
+      <li>If denied, written reasons; you have 30 days to appeal.</li>
+    </ul>
+
+    <FoilTemplate
+      title="Template letter"
+      description="Replace bracketed fields. Email is fine; address it to the Records Access Officer."
+      body={body}
+    />
+
+    <div class="disclaimer mt-8">
+      Template, not legal advice. For appeals or contested denials, an education attorney can help.
+    </div>
+  </article>
+</Layout>

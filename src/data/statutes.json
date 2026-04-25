@@ -1,0 +1,67 @@
+[
+  {
+    "id": "ny-ed-2d",
+    "short_name": "NY Education Law §2-d",
+    "full_citation": "N.Y. Education Law § 2-d",
+    "summary": "Student data privacy. Requires every NY school district to post a Parents Bill of Rights for Data Privacy, sign Data Protection Agreements with every third-party vendor handling student personally identifiable information, designate a Data Protection Officer, and maintain a public inventory of vendors.",
+    "url": "https://www.nysenate.gov/legislation/laws/EDN/2-D",
+    "key_provisions": [
+      "Parents Bill of Rights for Data Privacy must be posted publicly",
+      "Every vendor with access to student PII must have a signed Data Protection Agreement (DPA)",
+      "Parents have the right to inspect and request deletion of their child's data",
+      "Districts must report data breaches to the state and to affected parents",
+      "Each district must designate a Data Protection Officer (DPO)",
+      "Districts must maintain a public inventory of third-party data-processing vendors"
+    ]
+  },
+  {
+    "id": "nysed-part-121",
+    "short_name": "8 NYCRR Part 121",
+    "full_citation": "8 NYCRR Part 121 (Strengthening Data Privacy and Security in New York State Educational Agencies)",
+    "summary": "The implementing regulation for §2-d. Spells out what districts must publish, what every DPA must contain, what training is required for staff, and what the Parents Bill of Rights must include.",
+    "url": "https://www.nysed.gov/data-privacy-security/education-law-2-d-and-part-121-regulations",
+    "key_provisions": [
+      "Specifies the minimum content of every DPA between a district and a third-party vendor",
+      "Requires annual data privacy and security training for staff with access to PII",
+      "Specifies the timeline and content of breach notifications",
+      "Requires posting a Supplemental Information document for each vendor DPA"
+    ]
+  },
+  {
+    "id": "ferpa",
+    "short_name": "FERPA",
+    "full_citation": "Family Educational Rights and Privacy Act, 20 U.S.C. § 1232g",
+    "summary": "Federal law governing access to and disclosure of education records. Parents have the right to inspect their child's records, request corrections, and consent to most disclosures of personally identifiable information.",
+    "url": "https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html",
+    "key_provisions": [
+      "Right to inspect and review education records",
+      "Right to request amendment of records believed to be inaccurate",
+      "Generally, written consent required before disclosure of PII from records",
+      "Limited exceptions, including for 'school officials with legitimate educational interest'"
+    ]
+  },
+  {
+    "id": "coppa",
+    "short_name": "COPPA",
+    "full_citation": "Children's Online Privacy Protection Act, 15 U.S.C. §§ 6501–6506",
+    "summary": "Federal law restricting the online collection of personal information from children under 13. Schools may consent on behalf of parents only in limited circumstances tied to legitimate educational use.",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa",
+    "key_provisions": [
+      "Verifiable parental consent generally required before collecting PII from children under 13",
+      "Schools may provide consent only when use is for an educational purpose authorized by the school",
+      "Operators must provide notice and a means for parents to review and delete data"
+    ]
+  },
+  {
+    "id": "ny-distraction-free",
+    "short_name": "NY Distraction-Free Schools Law",
+    "full_citation": "Chapter 56 of the Laws of 2025, Education Law § 814",
+    "summary": "Requires NY school districts to adopt policies restricting student use of personal smartphones and personal internet-enabled devices during the school day. The statute applies to personal devices; school-issued devices used for instruction are excluded from its restrictions. The law is not a 1:1 device mandate.",
+    "url": "https://www.nysenate.gov/legislation/laws/EDN/814",
+    "key_provisions": [
+      "Districts must adopt a written policy restricting personal smartphones and similar devices during instructional time",
+      "School-issued devices used for instruction are excluded from the personal-device restriction",
+      "The law does not require districts to issue 1:1 devices"
+    ]
+  }
+]

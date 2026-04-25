@@ -1,0 +1,165 @@
+---
+import Layout from '../../components/Layout.astro';
+import districtsData from '../../data/districts.json';
+
+type Yes = boolean | null | 'partial' | 'unknown';
+
+interface District {
+  slug: string;
+  name: string;
+  county: string;
+  counties_served: string[];
+  enrollment?: number | null;
+  enrollment_year?: number | null;
+  address?: string | null;
+  phone?: string | null;
+  website?: string | null;
+  device_program: {
+    active: Yes;
+    grades: string | null;
+    device: string | null;
+    vendor: string | null;
+    take_home: string | null;
+    notes: string | null;
+  };
+  data_privacy: {
+    parents_bill_of_rights_posted: Yes;
+    parents_bill_of_rights_url: string | null;
+    data_protection_officer: string | null;
+    dpas_posted: Yes;
+    last_verified: string;
+  };
+  opt_out: { documented_procedure: Yes; notes: string | null };
+  board_contact: { superintendent: string | null; next_meeting: string | null; meeting_url: string | null };
+  source_documents: Array<{ title: string; url: string }>;
+  verified: boolean;
+  needs_foil: string[];
+}
+
+export async function getStaticPaths() {
+  const districts = districtsData as District[];
+  return districts.map((d) => ({ params: { slug: d.slug }, props: { district: d } }));
+}
+
+const { district } = Astro.props as { district: District };
+const d = district;
+
+function show(value: any, fallback = 'Not yet verified — needs FOIL') {
+  if (value === null || value === undefined || value === '') return fallback;
+  return value;
+}
+
+function yesNoUnknown(value: Yes) {
+  if (value === true) return 'Yes';
+  if (value === false) return 'No';
+  if (value === 'partial') return 'Partial';
+  return 'Unknown — needs verification';
+}
+
+const foilLabels: Record<string, string> = {
+  device_program_details: '1:1 device program details',
+  parents_bill_of_rights: 'Parents Bill of Rights for Data Privacy',
+  vendor_dpas: 'Vendor Data Protection Agreements',
+  opt_out_procedure: 'Documented opt-out procedure',
+  data_protection_officer: 'Data Protection Officer name and contact',
+  phone_address: 'District phone / address (verify)',
+};
+---
+
+<Layout title={d.name}>
+  <article class="prose-measure mx-auto px-4 py-10">
+    <p class="text-sm text-stone-500 mb-1"><a href="/districts/">← All districts</a></p>
+    <h1 class="text-3xl font-semibold mb-1">{d.name}</h1>
+    <p class="text-stone-600">{d.county} County{d.counties_served.length > 1 && ` (also serves: ${d.counties_served.filter((c) => c !== d.county).join(', ')})`}</p>
+
+    <section class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+      <div class="border border-stone-200 bg-white rounded p-3">
+        <div class="text-stone-500 uppercase text-xs tracking-wide">Address</div>
+        <div>{show(d.address)}</div>
+      </div>
+      <div class="border border-stone-200 bg-white rounded p-3">
+        <div class="text-stone-500 uppercase text-xs tracking-wide">Phone</div>
+        <div>{show(d.phone)}</div>
+      </div>
+      <div class="border border-stone-200 bg-white rounded p-3 sm:col-span-2">
+        <div class="text-stone-500 uppercase text-xs tracking-wide">Website</div>
+        <div>{d.website ? <a href={d.website} rel="noopener">{d.website}</a> : 'Not yet verified'}</div>
+      </div>
+    </section>
+
+    <h2 class="text-xl font-semibold mt-10 mb-2">1:1 device program</h2>
+    <dl class="text-sm grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+      <div><dt class="text-stone-500">Active</dt><dd>{yesNoUnknown(d.device_program.active)}</dd></div>
+      <div><dt class="text-stone-500">Grades affected</dt><dd>{show(d.device_program.grades)}</dd></div>
+      <div><dt class="text-stone-500">Device</dt><dd>{show(d.device_program.device)}</dd></div>
+      <div><dt class="text-stone-500">Vendor</dt><dd>{show(d.device_program.vendor)}</dd></div>
+      <div class="sm:col-span-2"><dt class="text-stone-500">Take-home policy</dt><dd>{show(d.device_program.take_home)}</dd></div>
+      {d.device_program.notes && (
+        <div class="sm:col-span-2"><dt class="text-stone-500">Notes</dt><dd>{d.device_program.notes}</dd></div>
+      )}
+    </dl>
+
+    <h2 class="text-xl font-semibold mt-10 mb-2">Data privacy posture (NY Ed Law §2-d)</h2>
+    <dl class="text-sm grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+      <div>
+        <dt class="text-stone-500">Parents Bill of Rights posted?</dt>
+        <dd>
+          {yesNoUnknown(d.data_privacy.parents_bill_of_rights_posted)}
+          {d.data_privacy.parents_bill_of_rights_url && (
+            <span> · <a href={d.data_privacy.parents_bill_of_rights_url} rel="noopener">view</a></span>
+          )}
+        </dd>
+      </div>
+      <div><dt class="text-stone-500">Vendor DPAs posted?</dt><dd>{yesNoUnknown(d.data_privacy.dpas_posted)}</dd></div>
+      <div><dt class="text-stone-500">Data Protection Officer</dt><dd>{show(d.data_privacy.data_protection_officer)}</dd></div>
+      <div><dt class="text-stone-500">Last verified</dt><dd>{d.data_privacy.last_verified}</dd></div>
+    </dl>
+
+    <h2 class="text-xl font-semibold mt-10 mb-2">Opt-out procedure</h2>
+    <dl class="text-sm">
+      <div><dt class="text-stone-500">Documented procedure?</dt><dd>{yesNoUnknown(d.opt_out.documented_procedure)}</dd></div>
+      {d.opt_out.notes && <div class="mt-1"><dt class="text-stone-500">Notes</dt><dd>{d.opt_out.notes}</dd></div>}
+    </dl>
+
+    <h2 class="text-xl font-semibold mt-10 mb-2">Board / contact</h2>
+    <dl class="text-sm grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+      <div><dt class="text-stone-500">Superintendent</dt><dd>{show(d.board_contact.superintendent)}</dd></div>
+      <div><dt class="text-stone-500">Next public meeting</dt><dd>{show(d.board_contact.next_meeting)}</dd></div>
+      <div class="sm:col-span-2"><dt class="text-stone-500">Board page</dt><dd>{d.board_contact.meeting_url ? <a href={d.board_contact.meeting_url} rel="noopener">{d.board_contact.meeting_url}</a> : 'Not yet verified'}</dd></div>
+    </dl>
+
+    {d.source_documents.length > 0 && (
+      <>
+        <h2 class="text-xl font-semibold mt-10 mb-2">Source documents</h2>
+        <ul class="list-disc pl-5 text-sm">
+          {d.source_documents.map((src) => (
+            <li><a href={src.url} rel="noopener">{src.title}</a></li>
+          ))}
+        </ul>
+      </>
+    )}
+
+    {d.needs_foil.length > 0 && (
+      <section class="mt-10 border border-amber-200 bg-amber-50 rounded p-4">
+        <h2 class="text-lg font-serif font-semibold text-amber-900 mb-2">What needs FOIL</h2>
+        <p class="text-sm text-amber-900 mb-2">These fields are not yet verified from public sources. A FOIL request to the district's Records Access Officer is the standard way to fill them in.</p>
+        <ul class="list-disc pl-5 text-sm text-amber-900 space-y-1">
+          {d.needs_foil.map((key) => (
+            <li>{foilLabels[key] || key}</li>
+          ))}
+        </ul>
+        <p class="text-sm mt-3"><a href="/foil/">FOIL templates →</a></p>
+      </section>
+    )}
+
+    <div class="mt-10 border border-stone-200 rounded-lg p-5 bg-white">
+      <h3 class="font-serif text-lg font-semibold mb-1">Generate a letter for this district</h3>
+      <p class="text-sm text-stone-600 mb-3">A calm, procedural opt-out letter pre-filled with this district's name. Runs in your browser; nothing is sent or stored.</p>
+      <a href={`/opt-out/letter-generator/?district=${d.slug}`} class="inline-block bg-stone-900 text-white px-4 py-2 rounded no-underline hover:bg-stone-700">Open letter generator →</a>
+    </div>
+
+    <div class="disclaimer mt-8">
+      Information, not legal advice. The data above is as of {d.data_privacy.last_verified}; verify with the district before relying on any specific detail.
+    </div>
+  </article>
+</Layout>

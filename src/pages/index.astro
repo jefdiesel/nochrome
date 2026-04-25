@@ -1,0 +1,44 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout title="NoChrome" description="A NY-specific resource for parents with questions about school-issued K-5 Chromebook and device programs.">
+  <section class="max-w-3xl mx-auto px-4 pt-12 pb-10">
+    <h1 class="text-3xl sm:text-4xl font-semibold leading-tight">
+      Your kindergartener doesn't have to take the Chromebook home.
+    </h1>
+    <p class="mt-4 text-lg text-stone-700">
+      A NY-specific resource for parents asking questions about K-5 school-issued device programs.
+      What the law requires of districts, what you can ask for, and how to put it in writing.
+    </p>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 grid sm:grid-cols-3 gap-4 pb-12">
+    <a href="/districts/" class="block border border-stone-200 bg-white rounded-lg p-5 no-underline hover:border-stone-400 transition">
+      <div class="font-serif text-lg font-semibold text-stone-900">Look up my district</div>
+      <div class="text-sm text-stone-600 mt-1">Policies, contacts, what's verified.</div>
+    </a>
+    <a href="/opt-out/" class="block border border-stone-200 bg-white rounded-lg p-5 no-underline hover:border-stone-400 transition">
+      <div class="font-serif text-lg font-semibold text-stone-900">Can I opt out?</div>
+      <div class="text-sm text-stone-600 mt-1">The legal landscape, plain English.</div>
+    </a>
+    <a href="/research/" class="block border border-stone-200 bg-white rounded-lg p-5 no-underline hover:border-stone-400 transition">
+      <div class="font-serif text-lg font-semibold text-stone-900">What's the research?</div>
+      <div class="text-sm text-stone-600 mt-1">Sourced summary on K-5 1:1 programs.</div>
+    </a>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 pb-16">
+    <h2 class="text-xl font-semibold mb-3">What this site is and isn't</h2>
+    <ul class="space-y-2 text-stone-700 list-disc pl-5">
+      <li>It is <strong>informational</strong> — designed for parents researching their options, not as a substitute for legal counsel.</li>
+      <li>It is <strong>NY-specific</strong>. The legal handles here (especially Education Law §2-d) are New York's.</li>
+      <li>It does <strong>not give legal advice</strong>. For your specific situation, consult an education attorney.</li>
+    </ul>
+
+    <div class="disclaimer mt-8">
+      Tone note: this site is not anti-technology. It's pro-developmentally-appropriate-practice and pro-data-privacy-compliance.
+      Districts have legal obligations under §2-d; this site helps you verify they're being met and exercise the rights you do have.
+    </div>
+  </section>
+</Layout>

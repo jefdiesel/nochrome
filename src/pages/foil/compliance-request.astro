@@ -1,0 +1,77 @@
+---
+import Layout from '../../components/Layout.astro';
+import FoilTemplate from '../../components/FoilTemplate.astro';
+
+const body = `[YOUR DATE]
+
+[YOUR NAME]
+[YOUR ADDRESS]
+[YOUR EMAIL]
+
+Records Access Officer
+[DISTRICT NAME]
+[DISTRICT ADDRESS]
+
+Re: Freedom of Information Law request — Education Law §2-d compliance documentation
+
+Dear Records Access Officer:
+
+Pursuant to the New York Freedom of Information Law (Public Officers Law Article 6), and concerning the district's obligations under Education Law §2-d and 8 NYCRR Part 121, I request copies of the following records:
+
+1. Records identifying the individual designated as the district's Data Protection Officer (DPO) under Part 121.8, including the date of designation and the DPO's job title and contact information.
+
+2. The district's current data security and privacy policy adopted under §2-d and Part 121.5, including any revisions adopted in the past three school years.
+
+3. The district's data inventory or system of records describing the categories of student personally identifiable information collected, the systems in which it is stored, and the third parties with whom it is shared.
+
+4. Any data breach or security incident notifications issued by the district under Part 121.10 in the past three school years, with student-identifying details redacted.
+
+5. The complaints log maintained pursuant to Part 121.4 reflecting parent complaints regarding breaches of student data, with student-identifying details redacted.
+
+6. The annual data privacy and security training records demonstrating compliance with Part 121.7 for staff with access to student PII (records may be summarized; individual employee names may be redacted).
+
+7. Any report, audit, or self-assessment of §2-d / Part 121 compliance the district has produced or commissioned in the past three school years.
+
+I request electronic delivery (PDF or original electronic format) where possible, to my email address above. Please advise in advance if any portion of this request will incur fees over $5.
+
+If any portion of this request is denied, please cite the specific statutory exemption relied on, and please provide the records that are not subject to that exemption.
+
+Please acknowledge this request within five business days as required by §89(3) of the Public Officers Law.
+
+Thank you for your assistance.
+
+Sincerely,
+
+[YOUR NAME]`;
+---
+
+<Layout title="FOIL — §2-d compliance documentation">
+  <article class="prose-measure mx-auto px-4 py-10">
+    <p class="text-sm text-stone-500 mb-1"><a href="/foil/">← All FOIL templates</a></p>
+    <h1 class="text-3xl font-semibold mb-2">FOIL: §2-d compliance documentation</h1>
+
+    <h2 class="text-lg font-semibold mt-6 mb-1">What this gets you</h2>
+    <p class="text-stone-700">The compliance scaffolding §2-d and Part 121 require: who the Data Protection Officer is, what the policy says, what's in the data inventory, what breaches have been reported, and what training has been done.</p>
+
+    <h2 class="text-lg font-semibold mt-6 mb-1">Where to send it</h2>
+    <p class="text-stone-700">The district's Records Access Officer.</p>
+
+    <h2 class="text-lg font-semibold mt-6 mb-1">What to expect</h2>
+    <ul class="list-disc pl-5 text-stone-700">
+      <li>5 business days to acknowledge.</li>
+      <li>20 business days to respond, deny, or specify a reasonable later date.</li>
+      <li>Some items (e.g., training records) may be appropriately redacted to remove individual employee identifiers.</li>
+      <li>If the district has not done what §2-d requires, the answer to several of these requests will be "no responsive records." That answer is itself useful and goes on the public record.</li>
+    </ul>
+
+    <FoilTemplate
+      title="Template letter"
+      description="Replace bracketed fields. This is the most pointed of the three FOIL templates; expect the longest response time."
+      body={body}
+    />
+
+    <div class="disclaimer mt-8">
+      Template, not legal advice.
+    </div>
+  </article>
+</Layout>

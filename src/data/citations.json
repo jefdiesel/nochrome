@@ -1,0 +1,82 @@
+[
+  {
+    "id": "aap-screen-time",
+    "title": "Media and Young Minds",
+    "author": "American Academy of Pediatrics, Council on Communications and Media",
+    "year": 2016,
+    "url": "https://publications.aap.org/pediatrics/article/138/5/e20162591/60503/",
+    "summary_for_internal_use": "AAP policy statement on screen media and children under 5; basis for guidance limiting screen time for young children."
+  },
+  {
+    "id": "who-screen-2019",
+    "title": "Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age",
+    "author": "World Health Organization",
+    "year": 2019,
+    "url": "https://www.who.int/publications/i/item/9789241550536",
+    "summary_for_internal_use": "WHO recommends no sedentary screen time for children under 1, and no more than one hour for children under 5."
+  },
+  {
+    "id": "sweden-2023-reversal",
+    "title": "Sweden's plan to bring books back to schools",
+    "author": "Reuters / various reporting on Swedish Ministry of Education statements",
+    "year": 2023,
+    "url": "https://www.reuters.com/world/europe/sweden-brings-more-books-quiet-reading-time-back-its-schools-2023-09-11/",
+    "summary_for_internal_use": "Coverage of Sweden's 2023 policy reversal de-emphasizing tablets in early grades and restoring printed books and handwriting."
+  },
+  {
+    "id": "eff-goguardian",
+    "title": "Spying on Students: GoGuardian and the Surveillance State",
+    "author": "Electronic Frontier Foundation",
+    "year": 2022,
+    "url": "https://www.eff.org/issues/student-privacy",
+    "summary_for_internal_use": "EFF reporting on classroom monitoring software, including documented over-flagging of LGBTQ+ search terms and First Amendment concerns."
+  },
+  {
+    "id": "cdt-2021-monitoring",
+    "title": "Online and Observed: Student Privacy Implications of School-Issued Devices and Student Activity Monitoring Software",
+    "author": "Center for Democracy and Technology",
+    "year": 2021,
+    "url": "https://cdt.org/insights/report-online-and-observed-student-privacy-implications-of-school-issued-devices-and-student-activity-monitoring-software/",
+    "summary_for_internal_use": "Survey of teachers, parents, and students on monitoring software and student-issued devices."
+  },
+  {
+    "id": "ny-2d-text",
+    "title": "New York Education Law § 2-d",
+    "author": "New York State Senate",
+    "year": 2014,
+    "url": "https://www.nysenate.gov/legislation/laws/EDN/2-D",
+    "summary_for_internal_use": "Primary source for §2-d statutory text."
+  },
+  {
+    "id": "nysed-part-121",
+    "title": "Education Law §2-d and Part 121 Regulations",
+    "author": "New York State Education Department",
+    "year": 2020,
+    "url": "https://www.nysed.gov/data-privacy-security/education-law-2-d-and-part-121-regulations",
+    "summary_for_internal_use": "NYSED's implementing regulation page for §2-d, including required content of Parents Bill of Rights."
+  },
+  {
+    "id": "ferpa-fpco",
+    "title": "Family Educational Rights and Privacy Act (FERPA)",
+    "author": "U.S. Department of Education, Family Policy Compliance Office",
+    "year": 1974,
+    "url": "https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html",
+    "summary_for_internal_use": "Primary federal source on FERPA rights."
+  },
+  {
+    "id": "ftc-coppa",
+    "title": "Children's Online Privacy Protection Rule (COPPA)",
+    "author": "U.S. Federal Trade Commission",
+    "year": 2013,
+    "url": "https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa",
+    "summary_for_internal_use": "FTC guidance on COPPA, including school-consent provisions."
+  },
+  {
+    "id": "ny-foil",
+    "title": "New York Freedom of Information Law (Public Officers Law Article 6)",
+    "author": "New York State Committee on Open Government",
+    "year": 1977,
+    "url": "https://opengovernment.ny.gov/freedom-information-law",
+    "summary_for_internal_use": "Primary source on FOIL procedures, response timelines, and appeal rights."
+  }
+]

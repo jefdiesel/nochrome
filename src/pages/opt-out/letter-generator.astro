@@ -1,0 +1,234 @@
+---
+import Layout from '../../components/Layout.astro';
+import districtsData from '../../data/districts.json';
+
+const districts = (districtsData as any[])
+  .map((d) => ({ slug: d.slug, name: d.name, county: d.county }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<Layout title="Letter generator" description="A client-side letter generator. Fills in a calm, procedural opt-out / data-privacy inquiry letter from your inputs. No data leaves your browser.">
+  <article class="prose-measure mx-auto px-4 py-10">
+    <h1 class="text-3xl font-semibold mb-2">Letter generator</h1>
+    <p class="text-stone-600">A calm, procedural template you can copy or download. Everything runs in your browser. Nothing is sent or stored.</p>
+
+    <form id="letter-form" class="mt-8 space-y-6">
+      <fieldset class="border border-stone-200 rounded p-4">
+        <legend class="px-2 text-sm font-medium text-stone-700">Parent</legend>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <label class="block text-sm">Name<input name="parent_name" required class="mt-1 w-full border border-stone-300 rounded px-2 py-1.5"/></label>
+          <label class="block text-sm">Email<input name="parent_email" type="email" class="mt-1 w-full border border-stone-300 rounded px-2 py-1.5"/></label>
+          <label class="block text-sm sm:col-span-2">Mailing address<textarea name="parent_address" rows="2" class="mt-1 w-full border border-stone-300 rounded px-2 py-1.5"></textarea></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="border border-stone-200 rounded p-4">
+        <legend class="px-2 text-sm font-medium text-stone-700">Student</legend>
+        <div class="grid sm:grid-cols-3 gap-3">
+          <label class="block text-sm sm:col-span-2">Student name<input name="student_name" required class="mt-1 w-full border border-stone-300 rounded px-2 py-1.5"/></label>
+          <label class="block text-sm">Grade<input name="student_grade" class="mt-1 w-full border border-stone-300 rounded px-2 py-1.5"/></label>
+          <label class="block text-sm sm:col-span-3">School name<input name="school_name" class="mt-1 w-full border border-stone-300 rounded px-2 py-1.5"/></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="border border-stone-200 rounded p-4">
+        <legend class="px-2 text-sm font-medium text-stone-700">District</legend>
+        <label class="block text-sm">District
+          <select name="district_slug" class="mt-1 w-full border border-stone-300 rounded px-2 py-1.5 bg-white">
+            <option value="">— Select —</option>
+            {districts.map((d) => (
+              <option value={d.slug}>{d.name} ({d.county})</option>
+            ))}
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset class="border border-stone-200 rounded p-4">
+        <legend class="px-2 text-sm font-medium text-stone-700">Reason category (select all that apply)</legend>
+        <div class="grid sm:grid-cols-2 gap-2 text-sm">
+          <label><input type="checkbox" name="reason" value="data_privacy" class="mr-1"/> Data privacy concerns</label>
+          <label><input type="checkbox" name="reason" value="developmental" class="mr-1"/> Developmental concerns (age-appropriate practice)</label>
+          <label><input type="checkbox" name="reason" value="religious" class="mr-1"/> Religious or philosophical objection</label>
+          <label><input type="checkbox" name="reason" value="accommodation" class="mr-1"/> Accommodation request (504 / IEP)</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="border border-stone-200 rounded p-4">
+        <legend class="px-2 text-sm font-medium text-stone-700">Specific requests</legend>
+        <div class="grid sm:grid-cols-1 gap-2 text-sm">
+          <label><input type="checkbox" name="request" value="no_take_home" class="mr-1"/> No take-home device</label>
+          <label><input type="checkbox" name="request" value="no_workspace_account" class="mr-1"/> No Google Workspace account creation</label>
+          <label><input type="checkbox" name="request" value="no_third_party_apps" class="mr-1"/> No third-party app installation without notice</label>
+          <label><input type="checkbox" name="request" value="copy_of_dpas" class="mr-1"/> Copy of all vendor Data Protection Agreements (DPAs)</label>
+          <label><input type="checkbox" name="request" value="copy_of_pbor" class="mr-1"/> Copy of the Parents Bill of Rights for Data Privacy</label>
+          <label><input type="checkbox" name="request" value="opt_out_monitoring" class="mr-1"/> Opt out of GoGuardian / Gaggle / similar monitoring</label>
+          <label><input type="checkbox" name="request" value="copy_of_data" class="mr-1"/> Copy of education records currently on file (FERPA)</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="border border-stone-200 rounded p-4">
+        <legend class="px-2 text-sm font-medium text-stone-700">Additional context (optional)</legend>
+        <label class="block text-sm">
+          <textarea name="additional" rows="4" class="mt-1 w-full border border-stone-300 rounded px-2 py-1.5" placeholder="Any specific facts about your child, prior conversations with the school, etc."></textarea>
+        </label>
+      </fieldset>
+
+      <div class="flex gap-3">
+        <button type="submit" class="bg-stone-900 text-white px-4 py-2 rounded hover:bg-stone-700">Generate letter</button>
+        <button type="reset" class="border border-stone-300 px-4 py-2 rounded hover:bg-stone-50">Reset</button>
+      </div>
+    </form>
+
+    <section id="output-wrap" class="mt-10 hidden">
+      <div class="flex items-center justify-between mb-2">
+        <h2 class="text-xl font-semibold">Your letter</h2>
+        <div class="flex gap-2">
+          <button id="copy-btn" class="text-sm border border-stone-300 rounded px-3 py-1.5 hover:bg-stone-50">Copy</button>
+          <button id="download-btn" class="text-sm border border-stone-300 rounded px-3 py-1.5 hover:bg-stone-50">Download .txt</button>
+        </div>
+      </div>
+      <pre id="output" class="whitespace-pre-wrap font-mono text-sm border border-stone-200 bg-white rounded p-4"></pre>
+    </section>
+
+    <div class="disclaimer mt-8">
+      This is a template, not legal advice. The generated letter is intentionally calm and procedural — its purpose is to put your request on the record. Consult an education attorney for situations involving a 504/IEP, a contested take-home requirement, or a religious objection.
+    </div>
+  </article>
+
+  <script type="module" is:inline define:vars={{ districtsData }}>
+    const today = new Date().toISOString().slice(0, 10);
+    const districts = districtsData;
+    const form = document.getElementById('letter-form');
+    const outputWrap = document.getElementById('output-wrap');
+    const output = document.getElementById('output');
+
+    // Pre-select district from query string
+    const params = new URLSearchParams(window.location.search);
+    const presetSlug = params.get('district');
+    if (presetSlug) {
+      const select = form.querySelector('select[name="district_slug"]');
+      if (select) select.value = presetSlug;
+    }
+
+    function getValues() {
+      const fd = new FormData(form);
+      const values = {};
+      for (const [k, v] of fd.entries()) {
+        if (k === 'reason' || k === 'request') {
+          values[k] = values[k] || [];
+          values[k].push(v);
+        } else {
+          values[k] = v;
+        }
+      }
+      values.reason = values.reason || [];
+      values.request = values.request || [];
+      return values;
+    }
+
+    function buildLetter(v) {
+      const district = districts.find((d) => d.slug === v.district_slug);
+      const districtName = district ? district.name : '[DISTRICT NAME]';
+      const lines = [];
+
+      lines.push('TEMPLATE — INFORMATIONAL ONLY, NOT LEGAL ADVICE.');
+      lines.push('Review and adapt before sending. For specific situations, consult an education attorney.');
+      lines.push('');
+      lines.push(today);
+      lines.push('');
+      lines.push(v.parent_name || '[Parent name]');
+      if (v.parent_address) lines.push(v.parent_address);
+      if (v.parent_email) lines.push(v.parent_email);
+      lines.push('');
+      lines.push(`Office of the Superintendent`);
+      lines.push(districtName);
+      lines.push('');
+      lines.push(`Re: ${v.student_name || '[Student name]'}` + (v.student_grade ? `, grade ${v.student_grade}` : '') + (v.school_name ? `, ${v.school_name}` : ''));
+      lines.push('');
+      lines.push('Dear Superintendent,');
+      lines.push('');
+
+      const reasonText = [];
+      if (v.reason.includes('data_privacy')) reasonText.push('data privacy and compliance with NY Education Law §2-d');
+      if (v.reason.includes('developmental')) reasonText.push('developmentally appropriate practice for early grades');
+      if (v.reason.includes('religious')) reasonText.push('religious and philosophical considerations');
+      if (v.reason.includes('accommodation')) reasonText.push('accommodation needs related to my child\'s individual circumstances');
+
+      const reasonClause = reasonText.length
+        ? `, primarily on the basis of ${reasonText.join(', ').replace(/, ([^,]*)$/, ', and $1')}`
+        : '';
+
+      lines.push(`I am writing about my child's participation in the district's 1:1 device program${reasonClause}. I appreciate the district's instructional work and would like to put a few specific requests on the record.`);
+      lines.push('');
+
+      if (v.request.length) {
+        lines.push('Specifically, I am requesting the following:');
+        lines.push('');
+        const reqLabels = {
+          no_take_home: 'My child should not be issued a take-home device. In-school use during instruction is acceptable; the device should remain at school at the end of each day.',
+          no_workspace_account: 'No Google Workspace for Education account should be created in my child\'s name without my prior written consent. If an account already exists, I request a description of what it contains and the data sharing terms in effect.',
+          no_third_party_apps: 'No third-party application or extension should be installed on my child\'s school-issued device without prior notice to me, including the vendor name and the data the application accesses.',
+          copy_of_dpas: 'I request a copy of every Data Protection Agreement (DPA) the district has signed with vendors that have access to my child\'s personally identifiable information, including but not limited to Google, the device monitoring vendor, and any learning-management or assessment vendors. This request is made under NY Education Law §2-d and Part 121 of the Commissioner\'s Regulations.',
+          copy_of_pbor: 'I request a copy of the district\'s Parents Bill of Rights for Data Privacy, including the supplemental information document for each vendor with access to student personally identifiable information.',
+          opt_out_monitoring: 'To the extent the district has discretion, I request that my child\'s device not be subject to GoGuardian, Gaggle, or comparable monitoring software, or, if removal is not possible, that I receive a written description of what categories the monitoring flags, who reviews flags, and how long monitoring data is retained.',
+          copy_of_data: 'Under FERPA, I request a copy of my child\'s education records currently on file with the district, including any data collected through school-issued devices.',
+        };
+        for (const r of v.request) {
+          if (reqLabels[r]) lines.push(`- ${reqLabels[r]}`);
+        }
+        lines.push('');
+      }
+
+      if (v.additional) {
+        lines.push('Additional context:');
+        lines.push(v.additional);
+        lines.push('');
+      }
+
+      lines.push('I am asking for a written response, even if a particular request cannot be granted. A written record helps both of us be precise about what is and is not in effect for my child.');
+      lines.push('');
+      lines.push('Thank you for your attention. I am happy to meet to discuss any of the above.');
+      lines.push('');
+      lines.push('Sincerely,');
+      lines.push('');
+      lines.push(v.parent_name || '[Parent name]');
+      lines.push('');
+      lines.push('---');
+      lines.push('References:');
+      lines.push('NY Education Law §2-d: https://www.nysenate.gov/legislation/laws/EDN/2-D');
+      lines.push('NYSED Part 121 (Data Privacy and Security): https://www.nysed.gov/data-privacy-security/education-law-2-d-and-part-121-regulations');
+      lines.push('FERPA (20 U.S.C. § 1232g): https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html');
+
+      return lines.join('\n');
+    }
+
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const v = getValues();
+      output.textContent = buildLetter(v);
+      outputWrap.classList.remove('hidden');
+      output.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById('copy-btn')?.addEventListener('click', async () => {
+      const text = output.textContent || '';
+      try {
+        await navigator.clipboard.writeText(text);
+        const btn = document.getElementById('copy-btn');
+        btn.textContent = 'Copied';
+        setTimeout(() => (btn.textContent = 'Copy'), 1500);
+      } catch {}
+    });
+
+    document.getElementById('download-btn')?.addEventListener('click', () => {
+      const text = output.textContent || '';
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'opt-out-letter.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</Layout>

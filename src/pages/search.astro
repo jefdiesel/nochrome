@@ -1,0 +1,26 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout title="Search">
+  <article class="prose-measure mx-auto px-4 py-12">
+    <h1 class="text-3xl font-semibold mb-2">Search</h1>
+    <p class="text-stone-700">Full-text search across district pages, FOIL templates, statute summaries, research, and the letter generator.</p>
+
+    <div id="search" class="mt-6"></div>
+    <p id="search-fallback" class="text-sm text-stone-500 mt-4">Search is built at deploy time. If you're viewing this in a local dev server, run <code>npm run build</code> to generate the search index, then preview the build with <code>npm run preview</code>.</p>
+
+    <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+    <script type="module" is:inline>
+      import('/pagefind/pagefind-ui.js')
+        .then(({ PagefindUI }) => {
+          new PagefindUI({ element: '#search', showSubResults: true, resetStyles: false });
+          const fallback = document.getElementById('search-fallback');
+          if (fallback) fallback.style.display = 'none';
+        })
+        .catch(() => {
+          // Pagefind index not present (dev mode) — keep the fallback message
+        });
+    </script>
+  </article>
+</Layout>

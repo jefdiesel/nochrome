@@ -1,0 +1,618 @@
+[
+  {
+    "slug": "chatham",
+    "name": "Chatham Central School District",
+    "county": "Columbia",
+    "counties_served": ["Columbia"],
+    "address": "50 Woodbridge Ave, Chatham, NY 12037",
+    "phone": "518-392-2400",
+    "website": "https://www.chathamcentralschools.com/",
+    "device_program": {
+      "active": null,
+      "grades": null,
+      "device": null,
+      "vendor": null,
+      "take_home": null,
+      "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null,
+      "parents_bill_of_rights_url": null,
+      "data_protection_officer": null,
+      "dpas_posted": "unknown",
+      "last_verified": "2026-04-25"
+    },
+    "opt_out": {
+      "documented_procedure": null,
+      "notes": null
+    },
+    "board_contact": {
+      "superintendent": null,
+      "next_meeting": null,
+      "meeting_url": null
+    },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "germantown",
+    "name": "Germantown Central School District",
+    "county": "Columbia",
+    "counties_served": ["Columbia"],
+    "address": "123 Main Street, Germantown, NY 12526",
+    "phone": "518-537-6280",
+    "website": "https://www.germantowncsd.org/",
+    "device_program": {
+      "active": null,
+      "grades": null,
+      "device": null,
+      "vendor": null,
+      "take_home": null,
+      "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null,
+      "parents_bill_of_rights_url": null,
+      "data_protection_officer": null,
+      "dpas_posted": "unknown",
+      "last_verified": "2026-04-25"
+    },
+    "opt_out": {
+      "documented_procedure": null,
+      "notes": null
+    },
+    "board_contact": {
+      "superintendent": null,
+      "next_meeting": null,
+      "meeting_url": null
+    },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "hudson-city",
+    "name": "Hudson City School District",
+    "county": "Columbia",
+    "counties_served": ["Columbia"],
+    "address": "215 Harry Howard Ave, Hudson, NY 12534",
+    "phone": "518-828-4360",
+    "website": "https://www.hudsoncsd.org/",
+    "device_program": {
+      "active": null,
+      "grades": null,
+      "device": null,
+      "vendor": null,
+      "take_home": null,
+      "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null,
+      "parents_bill_of_rights_url": null,
+      "data_protection_officer": null,
+      "dpas_posted": "unknown",
+      "last_verified": "2026-04-25"
+    },
+    "opt_out": {
+      "documented_procedure": null,
+      "notes": null
+    },
+    "board_contact": {
+      "superintendent": null,
+      "next_meeting": null,
+      "meeting_url": null
+    },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "ichabod-crane",
+    "name": "Ichabod Crane Central School District",
+    "county": "Columbia",
+    "counties_served": ["Columbia", "Rensselaer"],
+    "address": "PO Box 820, Valatie, NY 12184",
+    "phone": "518-758-7575",
+    "website": "https://www.ichabodcrane.org/",
+    "device_program": {
+      "active": null,
+      "grades": null,
+      "device": null,
+      "vendor": null,
+      "take_home": null,
+      "notes": "District straddles the Columbia/Rensselaer county line."
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null,
+      "parents_bill_of_rights_url": null,
+      "data_protection_officer": null,
+      "dpas_posted": "unknown",
+      "last_verified": "2026-04-25"
+    },
+    "opt_out": {
+      "documented_procedure": null,
+      "notes": null
+    },
+    "board_contact": {
+      "superintendent": null,
+      "next_meeting": null,
+      "meeting_url": null
+    },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "new-lebanon",
+    "name": "New Lebanon Central School District",
+    "county": "Columbia",
+    "counties_served": ["Columbia"],
+    "address": "14665 Route 22, New Lebanon, NY 12125",
+    "phone": "518-794-9016",
+    "website": "https://www.newlebanoncsd.org/",
+    "device_program": {
+      "active": null,
+      "grades": null,
+      "device": null,
+      "vendor": null,
+      "take_home": null,
+      "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null,
+      "parents_bill_of_rights_url": null,
+      "data_protection_officer": null,
+      "dpas_posted": "unknown",
+      "last_verified": "2026-04-25"
+    },
+    "opt_out": {
+      "documented_procedure": null,
+      "notes": null
+    },
+    "board_contact": {
+      "superintendent": null,
+      "next_meeting": null,
+      "meeting_url": null
+    },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "taconic-hills",
+    "name": "Taconic Hills Central School District",
+    "county": "Columbia",
+    "counties_served": ["Columbia"],
+    "address": "73 County Route 11A, Craryville, NY 12521",
+    "phone": "518-325-2800",
+    "website": "https://www.taconichills.k12.ny.us/",
+    "device_program": {
+      "active": null,
+      "grades": null,
+      "device": null,
+      "vendor": null,
+      "take_home": null,
+      "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null,
+      "parents_bill_of_rights_url": null,
+      "data_protection_officer": null,
+      "dpas_posted": "unknown",
+      "last_verified": "2026-04-25"
+    },
+    "opt_out": {
+      "documented_procedure": null,
+      "notes": null
+    },
+    "board_contact": {
+      "superintendent": null,
+      "next_meeting": null,
+      "meeting_url": null
+    },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "arlington",
+    "name": "Arlington Central School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess"],
+    "address": "Arlington CSD, Poughkeepsie, NY",
+    "phone": "845-486-4460",
+    "website": "https://www.arlingtonschools.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "beacon",
+    "name": "Beacon City School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess"],
+    "address": "Beacon CSD, Beacon, NY 12508",
+    "phone": "845-838-6900",
+    "website": "https://www.beaconk12.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "dover",
+    "name": "Dover Union Free School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess"],
+    "address": "Dover UFSD, Dover Plains, NY 12522",
+    "phone": "845-877-5700",
+    "website": "https://www.doverschools.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "hyde-park",
+    "name": "Hyde Park Central School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess"],
+    "address": "Hyde Park CSD, Hyde Park, NY 12538",
+    "phone": "845-229-4000",
+    "website": "https://www.hpcsd.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "millbrook",
+    "name": "Millbrook Central School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess"],
+    "address": "Millbrook CSD, Millbrook, NY 12545",
+    "phone": "845-677-4200",
+    "website": "https://www.millbrookcsd.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "northeast-webutuck",
+    "name": "Northeast (Webutuck) Central School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess"],
+    "address": "Webutuck CSD, Amenia, NY 12501",
+    "phone": "845-373-4100",
+    "website": "https://www.webutuckschools.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "pawling",
+    "name": "Pawling Central School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess"],
+    "address": "Pawling CSD, Pawling, NY 12564",
+    "phone": "845-855-4600",
+    "website": "https://www.pawlingschools.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "pine-plains",
+    "name": "Pine Plains Central School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess", "Columbia"],
+    "address": "Pine Plains CSD, Pine Plains, NY 12567",
+    "phone": "518-398-7181",
+    "website": "https://www.ppcsd.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null,
+      "notes": "District serves portions of southern Columbia and northern Dutchess."
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "poughkeepsie",
+    "name": "Poughkeepsie City School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess"],
+    "address": "Poughkeepsie CSD, Poughkeepsie, NY 12601",
+    "phone": "845-451-4900",
+    "website": "https://www.poughkeepsieschools.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "red-hook",
+    "name": "Red Hook Central School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess"],
+    "address": "Red Hook CSD, Red Hook, NY 12571",
+    "phone": "845-758-2241",
+    "website": "https://www.redhookcentralschools.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "rhinebeck",
+    "name": "Rhinebeck Central School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess"],
+    "address": "Rhinebeck CSD, Rhinebeck, NY 12572",
+    "phone": "845-871-5520",
+    "website": "https://www.rhinebeckcsd.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "spackenkill",
+    "name": "Spackenkill Union Free School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess"],
+    "address": "Spackenkill UFSD, Poughkeepsie, NY 12603",
+    "phone": "845-463-7800",
+    "website": "https://www.spackenkillschools.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "wappingers",
+    "name": "Wappingers Central School District",
+    "county": "Dutchess",
+    "counties_served": ["Dutchess"],
+    "address": "Wappingers CSD, Wappingers Falls, NY 12590",
+    "phone": "845-298-5000",
+    "website": "https://www.wappingersschools.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "cairo-durham",
+    "name": "Cairo-Durham Central School District",
+    "county": "Greene",
+    "counties_served": ["Greene"],
+    "address": "Cairo-Durham CSD, Cairo, NY 12413",
+    "phone": null,
+    "website": "https://www.cairodurham.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer", "phone_address"]
+  },
+  {
+    "slug": "catskill",
+    "name": "Catskill Central School District",
+    "county": "Greene",
+    "counties_served": ["Greene"],
+    "address": "Catskill CSD, Catskill, NY 12414",
+    "phone": null,
+    "website": "https://catskillcsd.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer", "phone_address"]
+  },
+  {
+    "slug": "coxsackie-athens",
+    "name": "Coxsackie-Athens Central School District",
+    "county": "Greene",
+    "counties_served": ["Greene"],
+    "address": "24 Sunset Blvd, Coxsackie, NY 12051",
+    "phone": "518-731-1700",
+    "website": "https://www.cacsd.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "greenville",
+    "name": "Greenville Central School District",
+    "county": "Greene",
+    "counties_served": ["Greene"],
+    "address": "Greenville CSD, Greenville, NY 12083",
+    "phone": null,
+    "website": "https://www.greenville.k12.ny.us/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer", "phone_address"]
+  },
+  {
+    "slug": "hunter-tannersville",
+    "name": "Hunter-Tannersville Central School District",
+    "county": "Greene",
+    "counties_served": ["Greene"],
+    "address": "6094 Main Street, Tannersville, NY 12485",
+    "phone": "518-589-5400",
+    "website": "https://www.htcsd.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+  },
+  {
+    "slug": "windham-ashland-jewett",
+    "name": "Windham-Ashland-Jewett Central School District",
+    "county": "Greene",
+    "counties_served": ["Greene"],
+    "address": "Windham-Ashland-Jewett CSD, Windham, NY 12496",
+    "phone": null,
+    "website": "https://www.wajcs.org/",
+    "device_program": {
+      "active": null, "grades": null, "device": null, "vendor": null, "take_home": null, "notes": null
+    },
+    "data_privacy": {
+      "parents_bill_of_rights_posted": null, "parents_bill_of_rights_url": null,
+      "data_protection_officer": null, "dpas_posted": "unknown", "last_verified": "2026-04-25"
+    },
+    "opt_out": { "documented_procedure": null, "notes": null },
+    "board_contact": { "superintendent": null, "next_meeting": null, "meeting_url": null },
+    "source_documents": [],
+    "verified": true,
+    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer", "phone_address"]
+  }
+]

@@ -1,0 +1,46 @@
+---
+import Layout from '../components/Layout.astro';
+import citationsData from '../data/citations.json';
+
+const citations = citationsData as Array<{ id: string; title: string; author: string; year: number; url: string }>;
+const cite = (id: string) => citations.find((c) => c.id === id);
+---
+
+<Layout title="Research">
+  <article class="prose-measure mx-auto px-4 py-12">
+    <h1 class="text-3xl font-semibold mb-4">What the research actually says</h1>
+    <p class="text-stone-600 italic">A short, sourced summary of K-5 1:1 device programs and student-monitoring software. Every claim links to its source. Quotations are kept under 14 words; everything else is paraphrased.</p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">What major medical and pedagogical bodies say</h2>
+    <p>The American Academy of Pediatrics' guidance on screen media for young children recommends limiting use of digital media for children under 5 and prioritizing high-quality, co-viewed content over solo device time
+      (<a href={cite('aap-screen-time')?.url}>AAP, 2016</a>).
+      The World Health Organization's 2019 guidelines for children under 5 recommend no more than one hour per day of sedentary screen time, with less being better
+      (<a href={cite('who-screen-2019')?.url}>WHO, 2019</a>).
+      In 2023 the Swedish Ministry of Education announced a partial reversal of its earlier emphasis on classroom tablets, restoring printed books and handwriting in early grades
+      (<a href={cite('sweden-2023-reversal')?.url}>Reuters, 2023</a>).
+      None of these are NY-specific, and none directly prohibit a 1:1 program; they reflect a body of professional opinion that is more cautious than the marketing material from device vendors.</p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">What the evidence shows on K-5 1:1 programs</h2>
+    <p>The empirical literature on K-5 1:1 programs is mixed and methodologically uneven. Studies vary in what they measure (achievement, engagement, equity, screen time), how long they follow students, and whether they control for confounds like district wealth and prior achievement. A careful read of the research is that 1:1 programs neither obviously help nor obviously hurt elementary outcomes on average, that effects vary substantially by implementation quality, and that the strongest negative signal in the literature is around displacement of higher-value activities (handwriting practice, in-person discussion, outdoor time) rather than direct instructional harm. Anyone telling you the research is settled in either direction is overclaiming.</p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">What the evidence shows on monitoring software</h2>
+    <p>Student-activity monitoring tools — GoGuardian, Gaggle, Securly, Lightspeed — are now installed on a large fraction of school-issued devices in the US. The Center for Democracy and Technology's 2021 survey found widespread monitoring and significant gaps in parent awareness
+      (<a href={cite('cdt-2021-monitoring')?.url}>CDT, 2021</a>).
+      The Electronic Frontier Foundation has documented over-flagging of LGBTQ+ search terms and routine surveillance of off-school-hours activity on school-issued devices
+      (<a href={cite('eff-goguardian')?.url}>EFF</a>).
+      Parents commonly do not know what monitoring software runs on the device their child takes home, what categories it flags, who reviews flags, or how long the data is retained.</p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">The data privacy dimension</h2>
+    <p>Google Workspace for Education collects a substantial set of signals — searches, document contents, location data when a Chromebook is used outside the school network, and metadata about every interaction. Districts share this data with Google under contractual terms that vary, and many districts also sign separate agreements with monitoring vendors, learning-management vendors, and educational-app vendors. NY Education Law §2-d requires every NY district to post a Parents Bill of Rights for Data Privacy, sign Data Protection Agreements with every vendor handling student PII, and designate a Data Protection Officer
+      (<a href={cite('ny-2d-text')?.url}>NY Ed Law §2-d</a>;
+      <a href={cite('nysed-part-121')?.url}>NYSED Part 121</a>).
+      Compliance varies. The District lookup on this site flags which seed districts have a Parents Bill of Rights publicly posted as of the last verification date, and which need a FOIL request to confirm.</p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">What this section is not</h2>
+    <p>This is a parents' summary, not a literature review. It is intentionally short and intentionally cautious. If you want to dig deeper, every linked source above is a starting point. If you find a meaningful study we've missed, send it in.</p>
+
+    <div class="disclaimer mt-8">
+      This page provides information, not legal or medical advice. For specific situations, consult an education attorney and your child's pediatrician.
+    </div>
+  </article>
+</Layout>

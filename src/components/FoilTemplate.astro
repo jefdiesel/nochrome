@@ -1,0 +1,39 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  body: string;
+}
+const { title, description, body } = Astro.props;
+const id = `foil-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+---
+
+<section class="mt-6">
+  <h2 class="text-xl font-semibold mb-1">{title}</h2>
+  <p class="text-stone-700 mb-3">{description}</p>
+
+  <div class="border border-stone-200 bg-white rounded">
+    <div class="flex items-center justify-between border-b border-stone-200 px-3 py-2">
+      <span class="text-xs uppercase tracking-wide text-stone-500">Template — copy and customize bracketed fields</span>
+      <button class="copy-foil text-xs border border-stone-300 rounded px-2 py-1 hover:bg-stone-50" data-target={id}>Copy</button>
+    </div>
+    <pre id={id} class="whitespace-pre-wrap font-mono text-sm p-4">{body}</pre>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('button.copy-foil').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const id = btn.getAttribute('data-target');
+      if (!id) return;
+      const el = document.getElementById(id);
+      if (!el) return;
+      try {
+        await navigator.clipboard.writeText(el.textContent || '');
+        const original = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(() => (btn.textContent = original || 'Copy'), 1500);
+      } catch {}
+    });
+  });
+</script>

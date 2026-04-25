@@ -1,0 +1,24 @@
+---
+import Layout from '../../components/Layout.astro';
+import DistrictSearch from '../../components/DistrictSearch.astro';
+import districts from '../../data/districts.json';
+
+const counties = Array.from(new Set(districts.map((d: any) => d.county))).sort();
+---
+
+<Layout title="Districts">
+  <article class="prose-measure mx-auto px-4 py-12">
+    <h1 class="text-3xl font-semibold mb-2">District lookup</h1>
+    <p class="text-stone-600">{districts.length} districts across {counties.join(', ')} counties. Each entry links to a per-district page with what is publicly verifiable, what isn't, and what to FOIL.</p>
+
+    <DistrictSearch />
+
+    <div class="mt-8 text-sm text-stone-600">
+      <p><strong>Verification standard:</strong> A district's basic info (address, phone, website) is verified against public sources. The data-privacy and 1:1 device fields are mostly unverified at v1 launch — those are the fields that typically require a FOIL request to confirm. Each per-district page lists which fields need FOIL.</p>
+    </div>
+
+    <div class="disclaimer mt-6">
+      Data on this site is as of the last verification date shown on each district page. Districts change policies; verify before relying on a specific detail.
+    </div>
+  </article>
+</Layout>

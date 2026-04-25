@@ -1,0 +1,50 @@
+---
+import districtsData from '../data/districts.json';
+
+const districts = districtsData
+  .map((d: any) => ({ slug: d.slug, name: d.name, county: d.county }))
+  .sort((a: any, b: any) => a.name.localeCompare(b.name));
+---
+
+<div class="my-6">
+  <label for="district-search" class="block text-sm font-medium text-stone-700 mb-2">Search by district name or county</label>
+  <input
+    id="district-search"
+    type="search"
+    placeholder="Type a district or county..."
+    class="w-full border border-stone-300 rounded px-3 py-2 text-base focus:outline-none focus:border-stone-600"
+    autocomplete="off"
+  />
+</div>
+
+<ul id="district-list" class="divide-y divide-stone-200 border-t border-b border-stone-200">
+  {districts.map((d) => (
+    <li class="district-item py-3 flex items-baseline justify-between" data-name={d.name.toLowerCase()} data-county={d.county.toLowerCase()}>
+      <a href={`/districts/${d.slug}/`} class="font-medium">{d.name}</a>
+      <span class="text-sm text-stone-500 ml-3 shrink-0">{d.county} County</span>
+    </li>
+  ))}
+</ul>
+<p id="district-empty" class="hidden text-stone-500 text-sm mt-4">No districts match your search.</p>
+
+<script>
+  const input = document.getElementById('district-search') as HTMLInputElement | null;
+  const items = Array.from(document.querySelectorAll<HTMLElement>('.district-item'));
+  const empty = document.getElementById('district-empty');
+
+  function filter() {
+    if (!input) return;
+    const q = input.value.trim().toLowerCase();
+    let visible = 0;
+    for (const el of items) {
+      const name = el.dataset.name || '';
+      const county = el.dataset.county || '';
+      const match = !q || name.includes(q) || county.includes(q);
+      el.style.display = match ? '' : 'none';
+      if (match) visible++;
+    }
+    if (empty) empty.classList.toggle('hidden', visible !== 0);
+  }
+
+  input?.addEventListener('input', filter);
+</script>
