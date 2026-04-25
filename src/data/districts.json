@@ -188,32 +188,36 @@
     "phone": "518-325-2800",
     "website": "https://www.taconichills.k12.ny.us/",
     "device_program": {
-      "active": null,
+      "active": true,
       "grades": null,
-      "device": null,
+      "device": "Laptop (specific make/model not publicly stated)",
       "vendor": null,
-      "take_home": null,
-      "notes": null
+      "take_home": "Yes — devices are issued to students and returned at the end of each school year per the laptop return schedule. Insurance is offered through Worth Ave. Group.",
+      "notes": "District publishes a laptop-insurance page and a laptop-return schedule, indicating an active 1:1 device program with take-home use. Grade levels and exact device/vendor not publicly stated."
     },
     "data_privacy": {
-      "parents_bill_of_rights_posted": null,
-      "parents_bill_of_rights_url": null,
-      "data_protection_officer": null,
+      "parents_bill_of_rights_posted": true,
+      "parents_bill_of_rights_url": "https://www.taconichills.k12.ny.us/page/annual-notifications-and-information",
+      "data_protection_officer": "John Dodds, Director of Computer Technology — JDodds@taconichills.k12.ny.us, (518) 325-2877",
       "dpas_posted": "unknown",
       "last_verified": "2026-04-25"
     },
     "opt_out": {
       "documented_procedure": null,
-      "notes": null
+      "notes": "No formal documented opt-out procedure found on the public site as of last verification."
     },
     "board_contact": {
-      "superintendent": null,
+      "superintendent": "Lynnette Brunger",
       "next_meeting": null,
-      "meeting_url": null
+      "meeting_url": "https://go.boarddocs.com/ny/taconichills/Board.nsf/Public"
     },
-    "source_documents": [],
+    "source_documents": [
+      { "title": "Annual Notifications & Information (Parents Bill of Rights, DPO)", "url": "https://www.taconichills.k12.ny.us/page/annual-notifications-and-information" },
+      { "title": "Laptop Insurance", "url": "https://www.taconichills.k12.ny.us/page/laptop-insurance" },
+      { "title": "Board of Education (BoardDocs)", "url": "https://go.boarddocs.com/ny/taconichills/Board.nsf/Public" }
+    ],
     "verified": true,
-    "needs_foil": ["device_program_details", "parents_bill_of_rights", "vendor_dpas", "opt_out_procedure", "data_protection_officer"]
+    "needs_foil": ["device_program_grades", "device_program_vendor", "vendor_dpas", "opt_out_procedure"]
   },
   {
     "slug": "arlington",
