@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://nochrome.vercel.app',
+  site: 'https://nochrome.wrapit.workers.dev',
   integrations: [mdx(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
